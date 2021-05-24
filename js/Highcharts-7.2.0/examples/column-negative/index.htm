@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Highcharts Example</title>
+
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+<script src="../../code/highcharts.js"></script>
+<script src="../../code/modules/exporting.js"></script>
+<script src="../../code/modules/export-data.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+
+		<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: '¿Quien es el Hombre?'
+    },
+    xAxis: {
+        categories: ['Familiar', 'Espiritual', 'Social', 'Profesional', 'Economica', 'Politica', 'Psico-Afectiva-Sexual', 'Intelectual', 'Personal']
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+        name: 'Positivo',
+        data: [8, 5, 9, 9, 8, 7, 9, 9, 6]
+    },{
+        name: 'Negativo',
+        data: [-2, -5, -1, -1, -2, -3, -1, -1, -4]
+    }]
+});
+		</script>
+	</body>
+</html>

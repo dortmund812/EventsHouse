@@ -1,0 +1,36 @@
+﻿<?php 
+	$lenguaje = array(
+		"Cerrar" => "Cerrar",
+		"Notificaciones" => "Notificaciones",
+		"Mensajes" => "Mensajes",
+		"UsuariosNuevos" => "Usuarios Nuevos",
+		"Visitas" => "Visitas",
+		"Eventos" => "Eventos",
+		"Configuracion" => "Configuración",
+		"datosIncorrectos" => "Datos Incorrectos",
+		"Empleado" => "Empleado",
+		"Solicitudes" => "Solicitudes",
+		"datosIncorrectos" => "Datos Incorrectos",
+
+		"Configuracion"=>"Configuración",
+		"CambiarFotodePerfil"=>"Cambiar Foto de Perfil",
+		"TerminosyCondiciones"=>"Términos y Condiciones",
+		"Nombres"=>"Nombres",
+		"Apellidos"=>"Apellidos",
+		"Telefono"=>"Teléfono",
+		"Correo"=>"Correo",
+		"Contraseñaactual"=>"Contraseña actual",
+		"NuevaContraseña"=>"Nueva Contraseña",
+		"ConfirmarContraseña"=>"Confirmar Contraseña",
+
+		"Fecha"=>"Fecha",
+		"Tematica"=>"Temática",
+		"Lugar"=>"Lugar",
+		"Direccion"=>"Dirección",
+		"Buscar"=>"Buscar",
+		"Tilulo"=>"Tílulo",
+		"Estado"=>"Estado",
+		"Honorarios"=>"Honorarios",
+		"ActualizarInformacion"=>"Actualizar Información",
+	);
+ ?>

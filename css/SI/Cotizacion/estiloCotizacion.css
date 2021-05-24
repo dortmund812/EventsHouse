@@ -1,0 +1,185 @@
+body {
+	background: url(../../../img/Extras/wall-1303662_1920.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+.idiomas{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	z-index: 30;
+}
+.idiomas ul li{
+	width: 30px;
+	list-style: none;
+	display: flex;
+	overflow: hidden;
+	transition: width .3s;
+}
+.idiomas ul li a{
+	width: 30px;
+	height: 30px;
+}
+.idiomas ul li:hover{
+	width: 90px;
+}
+.idiomas img{
+	width: 30px;
+}
+.evento{
+	margin-bottom: 20px;
+}
+.titulo{
+	background: #1c1c1c;
+	text-align: center;
+	padding: 25px;
+	font-size: 60px;
+	font-family: Papyrus;
+	color: #fff;
+}
+.menu{
+	margin-bottom: 20px;
+}
+.inicio{
+	color: #fff;
+	background: #1c1c1c;
+	text-decoration: none;
+	font-size: 30px;
+	padding-right: 30px;
+	padding-left: 30px;
+	border-radius: 100px;
+	transition: .5s;
+}
+.inicio:hover{
+	color: #fff;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+.inicio span{
+	margin-right: 10px;
+}
+.busqueda input[type="search"]{
+	height: 40px;
+	width: 250px;
+	border-radius: 40px;
+	padding: 0px 20px;
+	margin-right: 10px;
+	outline: none;
+}
+.busqueda button{
+	background: #fff;
+	font-size: 20px;
+	line-height: 30px;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	position: absolute;
+	top: 5px;
+	right: 40px;
+	transition: .3s;
+}
+.busqueda button:hover{
+	font-size: 30px;
+	line-height: 30px;
+}
+/*EVENTOS*/
+.columna{
+	position: relative;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+.columna .imgbox{
+	position: relative;
+	height: 100%;
+}
+.columna .imgbox img{
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	transition: .7s;
+}
+.columna:hover .imgbox img{
+	transform: scale(1.5);
+}
+.columna .detalles{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	background: #fff;
+	text-align: center;
+	transform: scale(.5);
+	visibility: hidden;
+	transition: all .5s;
+}
+.columna:hover .detalles{
+	transform: scale(1);
+	visibility: visible;
+}
+.columna .detalles .contenido{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	box-sizing: border-box;
+}
+.columna .detalles .contenido h2{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	color: #262626;
+	text-transform: uppercase;
+}
+.columna .detalles .contenido p{
+	font-size: 16px;
+	padding: 25px;
+	text-align: center;
+	color: #999;
+}
+/*PRIMERA OPCION*/
+.columna .detalles .contenido a{
+	display: inline-block;
+	line-height: 30px;
+	width: 60%;
+	min-height: 30px;
+	background: none;
+	border: 2px solid #0275db;
+	border-radius: 100px;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: none;
+	color: #0275db;
+}
+.columna .detalles .contenido a:hover{
+	background: #0275db;
+	border-color: #0275db;
+	color: #fff;
+}
+/*MEDIAQUERIES*/
+@media screen and (max-width: 991px) {
+	.columna .detalles .contenido p{
+		font-size: 12px;
+		padding: 10px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.busqueda input[type="search"]{
+		width: 200px;
+	}
+	.busqueda label{
+		display: none;
+	}
+}
+@media screen and (max-width: 444px) {
+	.busqueda input[type="search"]{
+		width: 150px;
+	}
+	.busqueda label{
+		display: none;
+	}
+}

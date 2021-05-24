@@ -1,0 +1,735 @@
+/*LOADER*/
+.pre-loader{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,.5);
+	z-index: 2000;
+}
+.loader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+.pre-loader.active {
+	display: block;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.btn_icn{
+	color: #fff;
+}
+.btn_icn:hover{
+	color: #fff;
+}
+.idiomas{
+	position: fixed;
+	top: 8px;
+	left: 0px;
+	z-index: 30;
+}
+.idiomas ul li{
+	width: 30px;
+	list-style: none;
+	display: flex;
+	overflow: hidden;
+	transition: width .3s;
+}
+.idiomas ul li a{
+	width: 30px;
+	height: 30px;
+}
+.idiomas ul li:hover{
+	width: 90px;
+}
+.idiomas img{
+	width: 30px;
+}
+.banquete-card{
+	cursor: pointer;
+	border: 1px solid #ccc;
+}
+.img_banq_bor{
+	border: 1px solid #ccc;
+	border-right: 0;
+}
+.card-select{
+	box-shadow: 0 0 20px;
+}
+.box-sha{
+	box-shadow: 0 0 5px;
+}
+.textar{
+	min-height: 65px; 
+	max-height: 120px;
+}
+.inppaq{
+	background: none;
+	border: none;
+	border-bottom: 1px solid;
+	border-radius: 0;
+}
+.inp-falta{
+	border-color: red;
+}
+.inp-success{
+	border-color: #4dc247;
+}
+.inp-info{
+	border-color: #55acee;	
+}
+input[type="radio"]{
+	width: -0.1px; 
+	height: -0.1px; 
+	background: none; 
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.img-alerta{
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	border: 1px solid;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+.img-alerta img{
+	width: 100%;
+	max-height: 100%;
+}
+@media screen and (max-width: 430px){
+	.img-alerta{
+		width: 250px;
+		height: 250px;
+	}
+	#alerta_solicitud{
+		max-width: 90vw;
+	}
+}
+.modal-content-ingreso{
+	background: none;
+	border: none;
+	width: 400px;
+	margin: 0px auto;
+}
+	/*
+	<!-- ##################################### -->
+	<!-- ---------- NMODAL REGISTRO ---------- -->
+	<!-- ##################################### -->
+	*/
+	.nuevo-modal-registro{
+		position: absolute;
+		top: 0;
+		left: -100vw;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: .5s ease;
+	}
+	.nuevo-modal-registro .formulario-modal{
+		width: 100%;
+		background: #fff;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 20px 0px;
+	}
+	.nuevo-modal-registro .formulario-modal .usuario{
+		width: 100%;
+		padding: 10px;
+		border-radius: 5px;
+		background: rgba(0,0,0,.1);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+	.nuevo-modal-registro .formulario-modal .usuario img{
+		width: 50%;
+		border: 1px solid;
+		border-radius: 50%;
+	}
+	.nuevo-modal-registro .formulario-modal form input[type="file"]{
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+	.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_hoja_vida"].deshabilitado{
+		font-weight: 600;
+		color: #fff;
+		background: #A4C8E4;
+		display: inline-block;
+		cursor: pointer;
+		padding: 10px 20px;
+		border-radius: 3px;
+		transition: .3s;
+	}
+	.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_foto"],
+	.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_hoja_vida"].habilitado{
+		font-weight: 600;
+		color: #fff;
+		background: #55acee;
+		display: inline-block;
+		cursor: pointer;
+		padding: 10px 20px;
+		border-radius: 3px;
+		transition: .3s;
+	}
+	.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_foto"]:hover,
+	.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_hoja_vida"].habilitado:hover{
+		background: #125688;
+	}
+	.nuevo-modal-registro .formulario-modal select.falta_cargo{
+		border: 2px solid;
+		border-color: #bb0000;
+	}
+	.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_hoja_vida"].falta{
+		background: #bb0000;
+	}
+	.nuevo-modal-registro .formulario-modal form{
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		margin: 20px 0px;
+	}
+	.nuevo-modal-registro .formulario-modal form .error-modal{
+		margin-bottom: 20px;
+		text-align: center;
+		background: #F2DEDE;
+		border:1px solid #a94442;
+		color: #a94442;
+	}
+	.nuevo-modal-registro .formulario-modal form input[type="email"],
+	.nuevo-modal-registro .formulario-modal form input[type="password"],
+	.nuevo-modal-registro .formulario-modal form input[type="text"]{
+		width: 100%;
+		height: 35px;
+		border: none;
+		outline: none;
+		border-bottom: 2px solid;
+		border-color: #55acee;
+		margin-bottom: 20px;
+		padding: 0px 5px;
+	}
+	.nuevo-modal-registro .formulario-modal form input[type="email"]::placeholder,
+	.nuevo-modal-registro .formulario-modal form input[type="password"]::placeholder,
+	.nuevo-modal-registro .formulario-modal form input[type="text"]::placeholder{
+		color: #ccc;
+	}
+	.nuevo-modal-registro .formulario-modal form input[type="email"]:focus,
+	.nuevo-modal-registro .formulario-modal form input[type="password"]:focus,
+	.nuevo-modal-registro .formulario-modal form input[type="text"]:focus{
+		border-color: #125688;
+		color: #000;
+	}
+	.nuevo-modal-registro .formulario-modal form input[type="submit"]{
+		width: 100%;
+		height: 45px;
+		border: none;
+		outline: none;
+		background: #55acee;
+		color: #fff;
+		padding: 10px 0px;
+		border-radius: 100px;
+		cursor: pointer;
+		transition: .3s;
+	}
+	.nuevo-modal-registro .formulario-modal form input[type="submit"]:hover{
+		background: #125688;
+	}
+	.nuevo-modal-registro .formulario-modal form input.error-solicitud{
+		border-color: #bb0000;
+		color: #bb0000;
+	}
+	.nuevo-modal-registro .formulario-modal form input.error-solicitud:focus{
+		border-color: #870101;
+	}
+	.nuevo-modal-registro .formulario-modal form input.success-solicitud{
+		border-color: #4dc247;
+		color: #4dc247;
+	}
+	.nuevo-modal-registro .formulario-modal form input.success-solicitud:focus{
+		border-color: #198414;
+	}
+	.nuevo-modal-registro .formulario-modal .extras-modal{
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.nuevo-modal-registro .formulario-modal .extras-modal .registro-modal{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 45px;
+		background: #55acee;
+		color: #fff;
+		border-radius: 100px;
+		cursor: pointer;
+		transition: .3s;
+		margin-bottom: 10px;
+	}
+	.nuevo-modal-registro .formulario-modal .extras-modal .registro-modal:hover{
+		background: #125688;
+		text-decoration: none;
+	}
+	/*
+	<!-- #################################### -->
+	<!-- ---------- NMODAL INGRESO ---------- -->
+	<!-- #################################### -->
+	*/
+	.nuevo-modal{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: .5s ease;
+	}
+	.nuevo-modal .formulario-modal{
+		width: 400px;
+		background: #fff;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 20px 0px;
+	}
+	.nuevo-modal .formulario-modal .usuario{
+		width: 40%;
+	}
+	.nuevo-modal .formulario-modal .usuario img{
+		width: 100%;
+		border: 1px solid;
+		border-radius: 50%;
+	}
+	.nuevo-modal .formulario-modal form{
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		margin: 20px 0px;
+	}
+	.nuevo-modal .formulario-modal form .error-modal{
+		margin-bottom: 20px;
+		text-align: center;
+		background: #F2DEDE;
+		border:1px solid #a94442;
+		color: #a94442;
+	}
+	.nuevo-modal .formulario-modal form input[type="email"],
+	.nuevo-modal .formulario-modal form input[type="password"],
+	.nuevo-modal .formulario-modal form input[type="text"]{
+		width: 100%;
+		height: 35px;
+		border: none;
+		outline: none;
+		border-bottom: 2px solid;
+		border-color: #55acee;
+		margin-bottom: 20px;
+		padding: 0px 5px;
+	}
+	.nuevo-modal .formulario-modal form input[type="email"]::placeholder,
+	.nuevo-modal .formulario-modal form input[type="password"]::placeholder,
+	.nuevo-modal .formulario-modal form input[type="text"]::placeholder{
+		color: #ccc;
+	}
+	.nuevo-modal .formulario-modal form input[type="email"]:focus,
+	.nuevo-modal .formulario-modal form input[type="password"]:focus,
+	.nuevo-modal .formulario-modal form input[type="text"]:focus{
+		border-color: #125688;
+	}
+	.nuevo-modal .formulario-modal form input[type="submit"]{
+		width: 100%;
+		height: 45px;
+		border: none;
+		outline: none;
+		background: #55acee;
+		color: #fff;
+		padding: 10px 0px;
+		border-radius: 100px;
+		cursor: pointer;
+		transition: .3s;
+	}
+	.nuevo-modal .formulario-modal form input[type="submit"]:hover{
+		background: #125688;
+	}
+	.nuevo-modal .formulario-modal .extras-modal{
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.nuevo-modal .formulario-modal .extras-modal .registro-modal{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 45px;
+		background: #55acee;
+		color: #fff;
+		border-radius: 100px;
+		cursor: pointer;
+		transition: .3s;
+		margin-bottom: 10px;
+	}
+	.nuevo-modal .formulario-modal .extras-modal .registro-modal:hover{
+		background: #125688;
+		text-decoration: none;
+	}
+.banquete-card{
+	cursor: pointer;
+}
+.card-select{
+	box-shadow: 0 0 20px;
+}
+.box-sha{
+	box-shadow: 0 0 5px;
+}
+.textar{
+	min-height: 65px; 
+	max-height: 120px;
+}
+.inppaq{
+	background: none;
+	border: none;
+	border-bottom: 1px solid;
+	border-radius: 0;
+}
+.inp-falta{
+	border-color: red;
+}
+.inp-success{
+	border-color: #4dc247;
+}
+.inp-info{
+	border-color: #55acee;	
+}
+input[type="radio"]{
+	width: -0.1px; 
+	height: -0.1px; 
+	background: none; 
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.img-alerta{
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	border: 1px solid;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+.img-alerta img{
+	width: 100%;
+	max-height: 100%;
+}
+@media screen and (max-width: 430px){
+	.img-alerta{
+		width: 250px;
+		height: 250px;
+	}
+	#alerta_solicitud{
+		max-width: 90vw;
+	}
+}
+.modal-content-ingreso{
+	background: none;
+	border: none;
+	width: 400px;
+	margin: 0px auto;
+}
+		/*
+		<!-- ##################################### -->
+		<!-- ---------- NMODAL REGISTRO ---------- -->
+		<!-- ##################################### -->
+		*/
+		.nuevo-modal-registro{
+			position: absolute;
+			top: 0;
+			left: -100vw;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: .5s ease;
+		}
+		.nuevo-modal-registro .formulario-modal{
+			width: 100%;
+			background: #fff;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px 0px;
+		}
+		.nuevo-modal-registro .formulario-modal .usuario{
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			background: rgba(0,0,0,.1);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+		.nuevo-modal-registro .formulario-modal .usuario img{
+			width: 50%;
+			border: 1px solid;
+			border-radius: 50%;
+		}
+		.nuevo-modal-registro .formulario-modal form input[type="file"]{
+			width: 0.1px;
+			height: 0.1px;
+			opacity: 0;
+			overflow: hidden;
+			position: absolute;
+			z-index: -1;
+		}
+		.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_hoja_vida"].deshabilitado{
+			font-weight: 600;
+			color: #fff;
+			background: #A4C8E4;
+			display: inline-block;
+			cursor: pointer;
+			padding: 10px 20px;
+			border-radius: 3px;
+			transition: .3s;
+		}
+		.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_foto"],
+		.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_hoja_vida"].habilitado{
+			font-weight: 600;
+			color: #fff;
+			background: #55acee;
+			display: inline-block;
+			cursor: pointer;
+			padding: 10px 20px;
+			border-radius: 3px;
+			transition: .3s;
+		}
+		.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_foto"]:hover,
+		.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_hoja_vida"].habilitado:hover{
+			background: #125688;
+		}
+		.nuevo-modal-registro .formulario-modal select.falta_cargo{
+			border: 2px solid;
+			border-color: #bb0000;
+		}
+		.nuevo-modal-registro .formulario-modal .subir-archivo label[for="subir_hoja_vida"].falta{
+			background: #bb0000;
+		}
+		.nuevo-modal-registro .formulario-modal form{
+			width: 80%;
+			display: flex;
+			flex-direction: column;
+			margin: 20px 0px;
+		}
+		.nuevo-modal-registro .formulario-modal form .error-modal{
+			margin-bottom: 20px;
+			text-align: center;
+			background: #F2DEDE;
+			border:1px solid #a94442;
+			color: #a94442;
+		}
+		.nuevo-modal-registro .formulario-modal form input[type="email"],
+		.nuevo-modal-registro .formulario-modal form input[type="password"],
+		.nuevo-modal-registro .formulario-modal form input[type="text"]{
+			width: 100%;
+			height: 35px;
+			border: none;
+			outline: none;
+			border-bottom: 2px solid;
+			border-color: #55acee;
+			margin-bottom: 20px;
+			padding: 0px 5px;
+		}
+		.nuevo-modal-registro .formulario-modal form input[type="email"]::placeholder,
+		.nuevo-modal-registro .formulario-modal form input[type="password"]::placeholder,
+		.nuevo-modal-registro .formulario-modal form input[type="text"]::placeholder{
+			color: #ccc;
+		}
+		.nuevo-modal-registro .formulario-modal form input[type="email"]:focus,
+		.nuevo-modal-registro .formulario-modal form input[type="password"]:focus,
+		.nuevo-modal-registro .formulario-modal form input[type="text"]:focus{
+			border-color: #125688;
+			color: #000;
+		}
+		.nuevo-modal-registro .formulario-modal form input[type="submit"]{
+			width: 100%;
+			height: 45px;
+			border: none;
+			outline: none;
+			background: #55acee;
+			color: #fff;
+			padding: 10px 0px;
+			border-radius: 100px;
+			cursor: pointer;
+			transition: .3s;
+		}
+		.nuevo-modal-registro .formulario-modal form input[type="submit"]:hover{
+			background: #125688;
+		}
+		.nuevo-modal-registro .formulario-modal form input.error-solicitud{
+			border-color: #bb0000;
+			color: #bb0000;
+		}
+		.nuevo-modal-registro .formulario-modal form input.error-solicitud:focus{
+			border-color: #870101;
+		}
+		.nuevo-modal-registro .formulario-modal form input.success-solicitud{
+			border-color: #4dc247;
+			color: #4dc247;
+		}
+		.nuevo-modal-registro .formulario-modal form input.success-solicitud:focus{
+			border-color: #198414;
+		}
+		.nuevo-modal-registro .formulario-modal .extras-modal{
+			width: 80%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.nuevo-modal-registro .formulario-modal .extras-modal .registro-modal{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 45px;
+			background: #55acee;
+			color: #fff;
+			border-radius: 100px;
+			cursor: pointer;
+			transition: .3s;
+			margin-bottom: 10px;
+		}
+		.nuevo-modal-registro .formulario-modal .extras-modal .registro-modal:hover{
+			background: #125688;
+			text-decoration: none;
+		}
+		/*
+		<!-- #################################### -->
+		<!-- ---------- NMODAL INGRESO ---------- -->
+		<!-- #################################### -->
+		*/
+		.nuevo-modal{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: .5s ease;
+		}
+		.nuevo-modal .formulario-modal{
+			width: 400px;
+			background: #fff;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px 0px;
+		}
+		.nuevo-modal .formulario-modal .usuario{
+			width: 40%;
+		}
+		.nuevo-modal .formulario-modal .usuario img{
+			width: 100%;
+			border: 1px solid;
+			border-radius: 50%;
+		}
+		.nuevo-modal .formulario-modal form{
+			width: 80%;
+			display: flex;
+			flex-direction: column;
+			margin: 20px 0px;
+		}
+		.nuevo-modal .formulario-modal form .error-modal{
+			margin-bottom: 20px;
+			text-align: center;
+			background: #F2DEDE;
+			border:1px solid #a94442;
+			color: #a94442;
+		}
+		.nuevo-modal .formulario-modal form input[type="email"],
+		.nuevo-modal .formulario-modal form input[type="password"],
+		.nuevo-modal .formulario-modal form input[type="text"]{
+			width: 100%;
+			height: 35px;
+			border: none;
+			outline: none;
+			border-bottom: 2px solid;
+			border-color: #55acee;
+			margin-bottom: 20px;
+			padding: 0px 5px;
+		}
+		.nuevo-modal .formulario-modal form input[type="email"]::placeholder,
+		.nuevo-modal .formulario-modal form input[type="password"]::placeholder,
+		.nuevo-modal .formulario-modal form input[type="text"]::placeholder{
+			color: #ccc;
+		}
+		.nuevo-modal .formulario-modal form input[type="email"]:focus,
+		.nuevo-modal .formulario-modal form input[type="password"]:focus,
+		.nuevo-modal .formulario-modal form input[type="text"]:focus{
+			border-color: #125688;
+		}
+		.nuevo-modal .formulario-modal form input[type="submit"]{
+			width: 100%;
+			height: 45px;
+			border: none;
+			outline: none;
+			background: #55acee;
+			color: #fff;
+			padding: 10px 0px;
+			border-radius: 100px;
+			cursor: pointer;
+			transition: .3s;
+		}
+		.nuevo-modal .formulario-modal form input[type="submit"]:hover{
+			background: #125688;
+		}
+		.nuevo-modal .formulario-modal .extras-modal{
+			width: 80%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.nuevo-modal .formulario-modal .extras-modal .registro-modal{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 45px;
+			background: #55acee;
+			color: #fff;
+			border-radius: 100px;
+			cursor: pointer;
+			transition: .3s;
+			margin-bottom: 10px;
+		}
+		.nuevo-modal .formulario-modal .extras-modal .registro-modal:hover{
+			background: #125688;
+			text-decoration: none;
+		}

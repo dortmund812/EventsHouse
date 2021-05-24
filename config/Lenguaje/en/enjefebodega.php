@@ -1,0 +1,71 @@
+<?php  
+	$lenguaje = array(
+
+		"Cerrar" => "Close",
+		"Notificaciones" => "Notifications",
+		"Mensajes" => "Messages",
+		"UsuariosNuevos" => "New Users",
+		"Visitas" => "Visits",
+		"Solicitud" => "Request",
+		"Inventario" => "Inventory",
+		"Productos" => "Products",
+		"Eventos" => "Events",
+		"Configuracion" => "Configuration",
+		"menulenguaje" => "English",
+
+		"Aspirantes"=>"Aspirantes",
+		"CambiarFotodePerfil"=>"Change Profile Picture",
+		"TerminosyCondiciones"=>"Terms and Conditions",
+		"Nombres"=>"Name",
+		"Apellidos"=>"Surnames",
+		"Telefono"=>"Phone",
+		"Correo"=>"Mail",
+		"Contraseñaactual"=>"Current password",
+		"NuevaContraseña"=>"New Password",
+		"ConfirmarContraseña"=>"Confirm Password",
+
+		"Evento"=>"Event",
+		"Fecha"=>"Date",
+		"Tematica"=>"Thematic",
+		"Lugar"=>"Places",
+		"Direccion"=>"Address",
+		"Buscar"=>"Search",
+
+
+		"Tipo"=>"Type",
+		"Costo"=>"Cost",
+		"Lugar"=>"Place",
+		"Usuario"=>"Users",
+		"Estado"=>"Status",
+
+
+		"Inventario"=>"Inventory",
+		"Implemento"=>"Implement",
+		"Tipo"=>"Type",
+		"Cotizacion"=>"Quote",
+		"Evento"=>"Event",
+		"Cantidad"=>"Quantity",
+		"Costototal"=>"total Cost",
+		"Estado"=>"Status",
+		"Buscar"=>"Search",
+		"EstasSeguroquequiereseliminaresteimplemento"=>"Are you sure you want to remove this implement?",
+		"Eliminar"=>"Delete",
+		"Cancelar"=>"Cancel",
+		"Implemento"=>"Implement",
+		"Cantidad"=>"Quantity",
+		"Modificar"=>"Modify",
+		"Cancelar"=>"Cancel",
+		"Usuario"=>"User",
+
+		"CostoMinimo"=>"Minimum Cost",
+		"CostoMaximo"=>"Maximum Cost",
+		"Aprobar"=>"Approve",
+		"Recordatorios"=>"Reminders",
+		"Personas"=>"Person",
+		"Costoporevento"=>"Cost per event",
+		"Nombre"=>"Name",
+		"Agregar"=>"Add",
+		"ActualizarInformacion"=>"Update information",
+	);
+
+?>

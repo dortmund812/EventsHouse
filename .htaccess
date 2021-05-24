@@ -1,0 +1,17 @@
+# HTID:10944696: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:10944696:
+
+Options All -Indexes
+ErrorDocument 404 /Events_House/config/Error/404.php
+RewriteEngine on
+
+# Rewrite /foo/bar to /foo/bar.php
+RewriteRule ^([^.?]+)$ %{REQUEST_URI}.php [L]
+
+# Return 404 if original request is /foo/bar.php
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+RewriteRule .* - [L,R=404]
+
+# NOTE! FOR APACHE ON WINDOWS: Add [NC] to RewriteCond like this:
+# RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$" [NC]

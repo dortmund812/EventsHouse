@@ -1,0 +1,760 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<title>Highcharts Example</title>
+	</head>
+	<body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="../../code/highcharts.js"></script>
+<script src="../../code/modules/xrange.js"></script>
+<script src="../../code/modules/exporting.js"></script>
+
+<div class="container">
+    <div class="row p-2">
+        <!-- BOSQUES -->
+        <div class="col-6 card card-body mb-2">
+            <div id="bosqueRobles"></div>
+        </div>
+        <!-- CARRETIABLE -->
+        <div class="col-6 card card-body mb-2">
+            <div id="carretiable"></div>
+        </div>
+        <!-- CASCADA -->
+        <div class="col-6 card card-body mb-2">
+            <div id="cascada"></div>
+        </div>
+        <!-- ECOLOGICO -->
+        <div class="col-6 card card-body mb-2">
+            <div id="ecologico"></div>
+        </div>
+        <!-- LAGUNA TARMO 1 -->
+        <div class="col-6 card card-body mb-2">
+            <div id="lagunat1"></div>
+        </div>
+        <!-- MARIPOSAS -->
+        <div class="col-6 card card-body mb-2">
+            <div id="mariposas"></div>
+        </div>
+        <!-- PICO DEL AGUILA TRAMO 1 -->
+        <div class="col-6 card card-body mb-2">
+            <div id="picoAguilat1"></div>
+        </div>
+        <!-- ROQUEDAL -->
+        <div class="col-6 card card-body mb-2">
+            <div id="roquedal"></div>
+        </div>
+        <!-- TOTAL -->
+        <div class="col-12 card card-body mb-2">
+            <div id="total"></div>
+        </div>
+    </div>
+</div>
+<!-- BOSQUE -->
+<script type="text/javascript">
+    Highcharts.setOptions({
+        chart: {
+            style: {
+                fontFamily: 'Times New Roman'
+            }
+        }
+    });
+    Highcharts.chart('bosqueRobles', {
+        chart: {
+            type: 'xrange'
+        },
+        title: {
+            text: 'Accesibilidad'
+        },
+        xAxis: {
+            type: 'number'
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            categories: ['Baja', 'Media Baja', 'Media', 'Alta', 'Muy Alta'],
+            reversed: true
+        },
+        series: [{
+            name: 'Bosque de Robles',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 20,
+            data: [{
+                x: 0,
+                x2: 50.49,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 50.49,
+                x2: 100,
+                y: 1,
+                color: '#FEDF00'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        }]
+
+    });
+</script>
+<!-- CARRETEABLE -->
+<script type="text/javascript">
+    Highcharts.setOptions({
+        chart: {
+            style: {
+                fontFamily: 'Times New Roman'
+            }
+        }
+    });
+    Highcharts.chart('carretiable', {
+        chart: {
+            type: 'xrange'
+        },
+        title: {
+            text: 'Accesibilidad'
+        },
+        xAxis: {
+            type: 'number'
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            categories: ['Baja', 'Media Baja', 'Media', 'Alta', 'Muy Alta'],
+            reversed: true
+        },
+        series: [{
+            name: 'Carreteable',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 20,
+            data: [{
+                x: 0,
+                x2: 17.33,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 17.33,
+                x2: 84.21,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 84.21,
+                x2: 100,
+                y: 2,
+                color: '#FE7F00'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        }]
+
+    });
+</script>
+<!-- CASCADA -->
+<script type="text/javascript">
+    Highcharts.setOptions({
+        chart: {
+            style: {
+                fontFamily: 'Times New Roman'
+            }
+        }
+    });
+    Highcharts.chart('cascada', {
+        chart: {
+            type: 'xrange'
+        },
+        title: {
+            text: 'Accesibilidad'
+        },
+        xAxis: {
+            type: 'number'
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            categories: ['Baja', 'Media Baja', 'Media', 'Alta', 'Muy Alta'],
+            reversed: true
+        },
+        series: [{
+            name: 'Cascada',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 20,
+            data: [{
+                x: 0,
+                x2: 33.71,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 33.71,
+                x2: 78.78,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 78.78,
+                x2: 98.81,
+                y: 2,
+                color: '#FE7F00'
+            }, {
+                x: 98.91,
+                x2: 100,
+                y: 3,
+                color: '#FE0000'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        }]
+
+    });
+</script>
+<!-- ECOLOGICO -->
+<script type="text/javascript">
+    Highcharts.setOptions({
+        chart: {
+            style: {
+                fontFamily: 'Times New Roman'
+            }
+        }
+    });
+    Highcharts.chart('ecologico', {
+        chart: {
+            type: 'xrange'
+        },
+        title: {
+            text: 'Accesibilidad'
+        },
+        xAxis: {
+            type: 'number'
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            categories: ['Baja', 'Media Baja', 'Media', 'Alta', 'Muy Alta'],
+            reversed: true
+        },
+        series: [{
+            name: 'Ecológico',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 20,
+            data: [{
+                x: 0,
+                x2: 2.69,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 2.69,
+                x2: 31.78,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 31.78,
+                x2: 95.28,
+                y: 2,
+                color: '#FE7F00'
+            }, {
+                x: 95.28,
+                x2: 100,
+                y: 3,
+                color: '#FE0000'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        }]
+
+    });
+</script>
+<!-- LAGUNA TRAMO 1 -->
+<script type="text/javascript">
+    Highcharts.setOptions({
+        chart: {
+            style: {
+                fontFamily: 'Times New Roman'
+            }
+        }
+    });
+    Highcharts.chart('lagunat1', {
+        chart: {
+            type: 'xrange'
+        },
+        title: {
+            text: 'Accesibilidad'
+        },
+        xAxis: {
+            type: 'number'
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            categories: ['Baja', 'Media Baja', 'Media', 'Alta', 'Muy Alta'],
+            reversed: true
+        },
+        series: [{
+            name: 'Laguna',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 20,
+            data: [{
+                x: 0,
+                x2: 28.33,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 28.33,
+                x2: 88.5,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 88.5,
+                x2: 100,
+                y: 2,
+                color: '#FE7F00'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        }]
+
+    });
+</script>
+<!-- MARIPOSAS -->
+<script type="text/javascript">
+    Highcharts.setOptions({
+        chart: {
+            style: {
+                fontFamily: 'Times New Roman'
+            }
+        }
+    });
+    Highcharts.chart('mariposas', {
+        chart: {
+            type: 'xrange'
+        },
+        title: {
+            text: 'Accesibilidad'
+        },
+        xAxis: {
+            type: 'number'
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            categories: ['Baja', 'Media Baja', 'Media', 'Alta', 'Muy Alta'],
+            reversed: true
+        },
+        series: [{
+            name: 'Mariposas',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 20,
+            data: [{
+                x: 0,
+                x2: 40.21,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 40.21,
+                x2: 70.29,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 70.29,
+                x2: 100,
+                y: 2,
+                color: '#FE7F00'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        }]
+
+    });
+</script>
+<!-- PICO DEL AGUILA TRAMO 1 -->
+<script type="text/javascript">
+    Highcharts.setOptions({
+        chart: {
+            style: {
+                fontFamily: 'Times New Roman'
+            }
+        }
+    });
+    Highcharts.chart('picoAguilat1', {
+        chart: {
+            type: 'xrange'
+        },
+        title: {
+            text: 'Accesibilidad'
+        },
+        xAxis: {
+            type: 'number'
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            categories: ['Baja', 'Media Baja', 'Media', 'Alta', 'Muy Alta'],
+            reversed: true
+        },
+        series: [{
+            name: 'Pico del Águila',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 20,
+            data: [{
+                x: 0,
+                x2: 7.20,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 7.20,
+                x2: 28.03,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 28.03,
+                x2: 91.74,
+                y: 2,
+                color: '#FE7F00'
+            },{
+                x: 91.74,
+                x2: 100,
+                y: 3,
+                color: '#FE0000'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        }]
+
+    });
+</script>
+<!-- ROQUEDAL -->
+<script type="text/javascript">
+    Highcharts.setOptions({
+        chart: {
+            style: {
+                fontFamily: 'Times New Roman'
+            }
+        }
+    });
+    Highcharts.chart('roquedal', {
+        chart: {
+            type: 'xrange'
+        },
+        title: {
+            text: 'Accesibilidad'
+        },
+        xAxis: {
+            type: 'number'
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            categories: ['Baja', 'Media Baja', 'Media', 'Alta', 'Muy Alta'],
+            reversed: true
+        },
+        series: [{
+            name: 'Roquedal',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 20,
+            data: [{
+                x: 0,
+                x2: 17.60,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 17.60,
+                x2: 81.2,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 81.2,
+                x2: 100,
+                y: 2,
+                color: '#FE7F00'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        }]
+
+    });
+</script>
+<!-- TOTAL -->
+<script type="text/javascript">
+    Highcharts.setOptions({
+        chart: {
+            style: {
+                fontFamily: 'Times New Roman'
+            }
+        }
+    });
+    Highcharts.chart('total', {
+        chart: {
+            type: 'xrange'
+        },
+        title: {
+            text: 'Accesibilidad'
+        },
+        xAxis: {
+            type: 'number'
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            categories: ['Baja', 'Media Baja', 'Media', 'Alta', 'Muy Alta']
+            // reversed: true
+        },
+        series: [{
+            name: 'Roquedal',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 5,
+            data: [{
+                x: 0,
+                x2: 17.60,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 17.60,
+                x2: 81.2,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 81.2,
+                x2: 100,
+                y: 2,
+                color: '#FE7F00'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        },{
+            name: 'Pico del Águila',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 5,
+            data: [{
+                x: 0,
+                x2: 12.78,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 12.78,
+                x2: 28.73,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 28.73,
+                x2: 100,
+                y: 2,
+                color: '#FE7F00'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        },{
+            name: 'Mariposas',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 5,
+            data: [{
+                x: 0,
+                x2: 40.21,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 40.21,
+                x2: 70.29,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 70.29,
+                x2: 100,
+                y: 2,
+                color: '#FE7F00'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        },{
+            name: 'Laguna',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 5,
+            data: [{
+                x: 0,
+                x2: 28.33,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 28.33,
+                x2: 79.33,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 79.33,
+                x2: 100,
+                y: 2,
+                color: '#FE7F00'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        },{
+            name: 'Ecológico',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 5,
+            data: [{
+                x: 0,
+                x2: 2.69,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 2.69,
+                x2: 31.78,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 31.78,
+                x2: 95.28,
+                y: 2,
+                color: '#FE7F00'
+            }, {
+                x: 95.28,
+                x2: 100,
+                y: 3,
+                color: '#FE0000'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        },{
+            name: 'Cascada',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 5,
+            data: [{
+                x: 0,
+                x2: 33.71,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 33.71,
+                x2: 78.78,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 78.78,
+                x2: 98.81,
+                y: 2,
+                color: '#FE7F00'
+            }, {
+                x: 98.91,
+                x2: 100,
+                y: 3,
+                color: '#FE0000'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        },{
+            name: 'Carreteable',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 5,
+            data: [{
+                x: 0,
+                x2: 17.33,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 17.33,
+                x2: 84.21,
+                y: 1,
+                color: '#FEDF00'
+            }, {
+                x: 84.21,
+                x2: 100,
+                y: 2,
+                color: '#FE7F00'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        },{
+            name: 'Bosque de Robles',
+            // pointPadding: 0,
+            // groupPadding: 0,
+            borderColor: 'gray',
+            pointWidth: 5,
+            data: [{
+                x: 0,
+                x2: 50.49,
+                y: 0,
+                // partialFill: 1,
+                color: '#1BFE00'
+            }, {
+                x: 50.49,
+                x2: 100,
+                y: 1,
+                color: '#FEDF00'
+            }],
+            dataLabels: {
+                enabled: true
+            }
+        }]
+
+    });
+</script>
+	</body>
+</html>
